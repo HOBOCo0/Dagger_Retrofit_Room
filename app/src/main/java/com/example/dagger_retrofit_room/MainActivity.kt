@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import com.example.dagger_retrofit_room.database.FakerDB
 import com.example.dagger_retrofit_room.viewModels.MainViewModel
 import com.example.dagger_retrofit_room.viewModels.MainViewModelFactory
 import javax.inject.Inject
@@ -14,6 +15,8 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     lateinit var mainViewModel: MainViewModel
+    @Inject
+    lateinit var fakerDB: FakerDB
     @Inject
     lateinit var mainViewModelFactory: MainViewModelFactory
 
